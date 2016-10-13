@@ -187,6 +187,9 @@
 		CACBE6291DAD1D13001F3430 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					f,
+				);
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = ZeahSoft;
@@ -514,6 +517,7 @@
 				CACBE65B1DAD1D13001F3430 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CACBE65C1DAD1D13001F3430 /* Build configuration list for PBXNativeTarget "MiraclePillsTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +526,7 @@
 				CACBE65E1DAD1D13001F3430 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CACBE65F1DAD1D13001F3430 /* Build configuration list for PBXNativeTarget "MiraclePillsUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +535,7 @@
 				CACBE6611DAD1D13001F3430 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
