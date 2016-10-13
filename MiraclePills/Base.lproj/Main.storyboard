@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miraclePillEmoji" translatesAutoresizingMaskIntoConstraints="NO" id="lGG-DS-WZf">
@@ -106,8 +106,11 @@
                                     <constraint firstAttribute="height" constant="12" id="uXc-i8-2eA"/>
                                 </constraints>
                                 <state key="normal" title="Choose Your State"/>
+                                <connections>
+                                    <action selector="stateBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yo6-iq-qpp"/>
+                                </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQh-80-0lT">
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQh-80-0lT">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="UF5-b3-O81"/>
                                     <constraint firstAttribute="height" constant="155" id="soP-50-pxP"/>
@@ -155,6 +158,7 @@
                     </view>
                     <connections>
                         <outlet property="statePicker" destination="mQh-80-0lT" id="eqV-WW-1Gx"/>
+                        <outlet property="statePickerBtn" destination="UNN-eV-bWA" id="R0m-4O-yvK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
