@@ -9,16 +9,37 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-
+    
     
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
+    
+    @IBOutlet weak var nameText: UITextField!
+    @IBOutlet weak var addressText: UITextField!
+    @IBOutlet weak var cityText: UITextField!
     
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var countryText: UITextField!
     
     @IBOutlet weak var zipLabel: UILabel!
     @IBOutlet weak var zipText: UITextField!
+    
+    @IBOutlet weak var buyBtn: UIButton!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var streetLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var provinceLabel: UILabel!
+    @IBOutlet weak var moneyLabel: UILabel!
+    @IBOutlet weak var pillNameLabel: UILabel!
+    @IBOutlet weak var pillPic: UIImageView!
+    @IBOutlet weak var dividerline: UIView!
+    
+    
+    
+    @IBOutlet weak var successImg: UIImageView!
+    
+    
     
     
     let states = ["Alberta","British Columbia","Manitoba","New Brunswick","Newfoundland and Labrador","Nova Scotia","Ontario","Prince Edward Island","Quebec","Saskatchewan"]
@@ -42,6 +63,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         countryText.isHidden = true
         zipText.isHidden = true
         zipLabel.isHidden = true
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -63,7 +85,90 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         countryText.isHidden = false
         zipText.isHidden = false
         zipLabel.isHidden = false
+        showBtn()
     }
+    
+    
+    @IBAction func nameTxt(_ sender: AnyObject) {
+        if(nameText.hasText)
+        {
+            showBtn()
+        }
+    }
+    
+    
+    @IBAction func addressTxt(_ sender: AnyObject) {
+        if(addressText.hasText)
+        {
+            showBtn()
+        }
+    }
+    
+    @IBAction func cityTxt(_ sender: AnyObject) {
+        if(cityText.hasText)
+        {
+            showBtn()
+        }
+    }
+    
+    
+    @IBAction func countryTxt(_ sender: AnyObject) {
+        if(countryText.hasText)
+        {
+                showBtn()
+        }
+    }
+    
+    
+    @IBAction func zipTxt(_ sender: AnyObject) {
+        if(zipText.hasText)
+        {
+                showBtn()
+        }
+    }
+    
+    @IBAction func buyBtnPress(_ sender: AnyObject) {
+        pillPic.isHidden = true
+        pillNameLabel.isHidden = true
+        moneyLabel.isHidden = true
+        dividerline.isHidden = true
+        nameLabel.isHidden = true
+        nameText.isHidden = true
+        streetLabel.isHidden = true
+        addressText.isHidden = true
+        cityLabel.isHidden = true
+        cityText.isHidden = true
+        provinceLabel.isHidden = true
+        statePickerBtn.isHidden = true
+        countryText.isHidden = true
+        countryLabel.isHidden = true
+        zipText.isHidden = true
+        zipLabel.isHidden = true
+        buyBtn.isHidden = true
+        successImg.isHidden = false
+   }
+    
+    
+    func showBtn()
+    {
+        if(isComplete())
+        {
+            buyBtn.isHidden = false
+        }
+    }
+    
+    func isComplete() -> Bool {
+        var complete = false
+        
+        if(countryText.hasText && nameText.hasText && cityText.hasText && addressText.hasText && zipText.hasText && (!(statePickerBtn.currentTitle?.contains("Choose"))!))
+        {
+            complete = true
+        }
+        
+        return complete
+    }
+    
+    
 }
 
 

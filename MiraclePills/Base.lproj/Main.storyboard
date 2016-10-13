@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="507" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miraclePillEmoji" translatesAutoresizingMaskIntoConstraints="NO" id="lGG-DS-WZf">
@@ -60,6 +60,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameTxt:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="uyK-2l-aWi"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STREET ADDRESS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v5-2d-MM1">
                                 <constraints>
@@ -76,6 +79,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="addressTxt:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="guP-Ji-Zoh"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CITY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pi-7K-PY4">
                                 <constraints>
@@ -100,6 +106,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="cityTxt:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="mDQ-ZY-F96"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COUNTRY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moa-v9-weF">
                                 <constraints>
@@ -116,6 +125,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="countryTxt:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="gC5-eb-Ppv"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNN-eV-bWA">
                                 <constraints>
@@ -148,10 +160,17 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="zipTxt:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="eoO-ub-Em5"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adt-8H-CFr">
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adt-8H-CFr">
                                 <state key="normal" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dxD-CL-dT3"/>
+                                </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="poE-hs-kWZ"/>
                         </subviews>
                         <color key="backgroundColor" red="0.76286226511001587" green="0.87921887636184692" blue="0.97533959150314331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -160,6 +179,7 @@
                             <constraint firstItem="0v5-2d-MM1" firstAttribute="top" secondItem="kL1-Zw-1h4" secondAttribute="bottom" constant="8" id="4Rg-mx-kn2"/>
                             <constraint firstItem="SH5-Ge-GAW" firstAttribute="top" secondItem="lGG-DS-WZf" secondAttribute="bottom" constant="25" id="5q1-FI-6wF"/>
                             <constraint firstItem="7X6-6P-oEe" firstAttribute="top" secondItem="moa-v9-weF" secondAttribute="bottom" constant="8" id="66l-wl-QCa"/>
+                            <constraint firstItem="poE-hs-kWZ" firstAttribute="top" secondItem="lGG-DS-WZf" secondAttribute="bottom" constant="46" id="8CT-jo-on6"/>
                             <constraint firstItem="Fct-fR-J2Q" firstAttribute="trailing" secondItem="Avw-Yt-ACn" secondAttribute="trailing" id="8LJ-fq-oOd"/>
                             <constraint firstItem="0v5-2d-MM1" firstAttribute="trailing" secondItem="kL1-Zw-1h4" secondAttribute="trailing" id="9fg-bE-VN2"/>
                             <constraint firstItem="npo-jR-fGI" firstAttribute="leading" secondItem="xbb-0O-6sY" secondAttribute="leading" id="AEO-1C-EQz"/>
@@ -173,6 +193,7 @@
                             <constraint firstAttribute="trailing" secondItem="xbb-0O-6sY" secondAttribute="trailing" constant="20" id="KJO-PM-72u"/>
                             <constraint firstItem="0Pi-7K-PY4" firstAttribute="leading" secondItem="Cei-eU-f3g" secondAttribute="leading" id="Ns5-WE-Kp9"/>
                             <constraint firstItem="ift-dh-uZb" firstAttribute="top" secondItem="gSM-Ft-LNa" secondAttribute="bottom" constant="8" id="PHf-wF-aDo"/>
+                            <constraint firstItem="poE-hs-kWZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PnK-Y2-CeS"/>
                             <constraint firstItem="gSM-Ft-LNa" firstAttribute="leading" secondItem="7X6-6P-oEe" secondAttribute="leading" id="RJQ-0r-D0w"/>
                             <constraint firstItem="SH5-Ge-GAW" firstAttribute="centerX" secondItem="lGG-DS-WZf" secondAttribute="centerX" id="Ru4-20-SMj"/>
                             <constraint firstItem="lGG-DS-WZf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S4M-zy-sP9"/>
@@ -210,21 +231,35 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressText" destination="Cei-eU-f3g" id="eds-WV-lEQ"/>
+                        <outlet property="buyBtn" destination="Adt-8H-CFr" id="NUB-6D-JuJ"/>
+                        <outlet property="cityLabel" destination="0Pi-7K-PY4" id="wln-4y-6D1"/>
+                        <outlet property="cityText" destination="Avw-Yt-ACn" id="SJz-bn-J9r"/>
                         <outlet property="countryLabel" destination="moa-v9-weF" id="Jsd-nS-teJ"/>
                         <outlet property="countryText" destination="7X6-6P-oEe" id="eXf-fd-uIC"/>
+                        <outlet property="dividerline" destination="xbb-0O-6sY" id="E0M-Hw-NGd"/>
+                        <outlet property="moneyLabel" destination="37Z-tb-SR9" id="Ir5-rb-ZTc"/>
+                        <outlet property="nameLabel" destination="npo-jR-fGI" id="RtV-We-MWw"/>
+                        <outlet property="nameText" destination="kL1-Zw-1h4" id="Rv4-dU-0Bf"/>
+                        <outlet property="pillNameLabel" destination="SH5-Ge-GAW" id="ru7-ep-FPs"/>
+                        <outlet property="pillPic" destination="lGG-DS-WZf" id="jgz-sJ-L9O"/>
+                        <outlet property="provinceLabel" destination="Fct-fR-J2Q" id="vNF-Z4-5Bi"/>
                         <outlet property="statePicker" destination="mQh-80-0lT" id="eqV-WW-1Gx"/>
                         <outlet property="statePickerBtn" destination="UNN-eV-bWA" id="R0m-4O-yvK"/>
+                        <outlet property="streetLabel" destination="0v5-2d-MM1" id="3os-N6-gUj"/>
+                        <outlet property="successImg" destination="poE-hs-kWZ" id="qke-GO-bL3"/>
                         <outlet property="zipLabel" destination="gSM-Ft-LNa" id="V3g-N9-aD5"/>
                         <outlet property="zipText" destination="ift-dh-uZb" id="Y1I-z9-xIE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110.6508875739645" y="120.3125"/>
+            <point key="canvasLocation" x="110.14492753623189" y="119.83695652173914"/>
         </scene>
     </scenes>
     <resources>
         <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>
